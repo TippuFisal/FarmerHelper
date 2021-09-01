@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    tools:context=".ui.onboarding.OnBoardingActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_onBoardlogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_150"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"/>
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOnboardingAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="Welcome to Farmer Helper"
+        app:layout_constraintTop_toBottomOf="@+id/iv_onBoardlogo"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginTop="@dimen/dp_30"
+        android:visibility="gone"
+        android:background="@drawable/agri_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnboardingAppName"/>
+
+    <ProgressBar
+        android:id="@+id/pbOnBoarding"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_50"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnboardingAppName"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_govt_scheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:textColor="@color/button_color"
+        app:layout_constraintBottom_toTopOf="@+id/btn_find_market"
+        android:text="Latest government Scheme"
+        android:backgroundTint="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_find_market"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:textColor="@color/button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Find near by Market"
+        android:backgroundTint="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
